@@ -1,4 +1,4 @@
-# Start projetct
+# Start project
 npm start
 
 # Linter for project:
