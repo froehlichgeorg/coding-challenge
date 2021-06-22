@@ -1,0 +1,24 @@
+.search-item {
+  display: grid;
+  grid-template-columns: minmax(50px, 100px) 5fr 1fr;
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #CCC;
+  &:hover {
+    background-color: #FAFAFA;
+  }
+  .item-logo {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

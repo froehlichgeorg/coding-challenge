@@ -1,0 +1,131 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .modal-window {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    .close {
+      width: 30px;
+      height: 30px;
+      right: -15px;
+      top: -15px;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid #ccc;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+      background-color: white;
+      cursor: pointer;
+      transition: 0.3s linear all;
+      &:before,
+      &:after {
+        transition: 0.3s linear background-color;
+        width: 20px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #ccc;
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &:hover {
+        border-color: #282c34;
+        &:before,
+        &:after {
+          background-color: #282c34;
+        }
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+    .results {
+      overflow-y: scroll;
+      height: 100%;
+      .company-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 40px 20px 0;
+        justify-content: space-between;
+        border-bottom: 2px solid #d9d9d9;
+        h2 {
+          font-weight: lighter;
+        }
+        .company-details {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+        .job-details {
+          margin-right: 0;
+          .type-of-job {
+            font-size: 10px;
+            margin-bottom: 5px;
+          }
+          .created-tome {
+            font-size: 10px;
+            margin-bottom: 5px;
+          }
+          .working-time {
+            margin-bottom: 5px;
+            font-size: 10px;
+            .working-time-item {
+            }
+          }
+          .type-of-job,
+          .created-tome,
+          .working-time {
+            .title-of-job-details {
+              font-weight: bold;
+              margin-right: 5px;
+            }
+          }
+        }
+        .company-logo {
+          width: 80px;
+          height: 80px;
+          margin-right: 20px;
+          font-size: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .preview-text {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 1.7;
+        padding-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "extends": [
+  "eslint:recommended",
+  "plugin:react/recommended",
+    "plugin:jest/recommended"
+],
+  "plugins": ["jest"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "fetch": false,
+    "document": false
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/no-unresolved": true
+  }
+}

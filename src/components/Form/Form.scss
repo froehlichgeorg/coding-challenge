@@ -1,0 +1,15 @@
+.search-form {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  background-color: rgba(#61dafb, 0.9);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  .form-row {
+    .input-item {
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+}

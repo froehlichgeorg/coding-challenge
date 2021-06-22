@@ -1,0 +1,24 @@
+.search-results {
+  padding: 2rem;
+  .table-header {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: minmax(50px, 100px) 5fr 1fr;
+    text-align: left;
+    align-items: center;
+    border-bottom: 2px solid #282c34;
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    .pagination {
+      cursor: pointer;
+      padding: 20px;
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
