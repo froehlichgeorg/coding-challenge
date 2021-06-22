@@ -49,8 +49,8 @@ function App() {
             />
             <Input
               typeOfInput={"submit"}
-              name={"Search"}
-              value={"Search"}
+              name={"submit"}
+              value={"submit"}
               dataTest="input-submit"
             />
           </ComponentWrapper>

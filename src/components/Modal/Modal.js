@@ -40,7 +40,11 @@ const Modal = ({ dataForModal, setIsShowModal }) => {
   const refContainer = useRef();
 
   return (
-    <div className="modal-overlay" onClick={handleClickOutside}>
+    <div
+      className="modal-overlay"
+      onClick={handleClickOutside}
+      data-test="modal"
+    >
       <div className="modal-window" ref={refContainer}>
         <div className="results">
           <div className="company-header">
