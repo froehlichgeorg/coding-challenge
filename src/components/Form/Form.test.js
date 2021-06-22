@@ -7,7 +7,7 @@ const setup = () => shallow(<Form />);
 const findByTestAttribute = (wrapper, val) =>
   wrapper.find(`[data-test='${val}']`);
 
-test("renders form component without crashing", () => {
+test("renders Form component without crashing", () => {
   const wrapper = setup();
   const appComponent = findByTestAttribute(wrapper, "component-form");
   expect(appComponent.length).toBe(1);

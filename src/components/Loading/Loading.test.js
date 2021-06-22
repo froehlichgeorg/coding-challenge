@@ -7,7 +7,7 @@ const setup = () => shallow(<Loading />);
 const findByTestAttribute = (wrapper, val) =>
   wrapper.find(`[data-test='${val}']`);
 
-test("renders loading component without crashing", () => {
+test("renders Loading component without crashing", () => {
   const wrapper = setup();
   const appComponent = findByTestAttribute(wrapper, "loading");
   expect(appComponent.length).toBe(1);

@@ -1,15 +1,15 @@
-import Modal from "./Modal";
+import SearchItem from "./SearchItem";
 import Enzyme, { shallow } from "enzyme";
 import React from "react";
 import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
-import dataForModal from "./dataForModal";
+import value from "./dataFromSearchItem";
 Enzyme.configure({ adapter: new EnzymeAdapter() });
-const setup = () => shallow(<Modal dataForModal={dataForModal} />);
+const setup = () => shallow(<SearchItem value={value} />);
 const findByTestAttribute = (wrapper, val) =>
   wrapper.find(`[data-test='${val}']`);
 
-test("renders Modal component given the props", () => {
+test("renders Search Item component given the props", () => {
   const wrapper = setup();
-  const appComponent = findByTestAttribute(wrapper, "modal");
+  const appComponent = findByTestAttribute(wrapper, "search-item");
   expect(appComponent.length).toBe(1);
 });

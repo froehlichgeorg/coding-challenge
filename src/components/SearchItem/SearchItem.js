@@ -28,6 +28,7 @@ const SearchItem = ({ value, setDataForModal, setIsShowModal }) => {
       className="search-item"
       data-link={relativeDetailUrl}
       onClick={detailsHandler}
+      data-test="search-item"
     >
       <div className="item-logo">
         {logo ? <img src={logo} alt={name} /> : <span>{name}</span>}
